@@ -1,0 +1,102 @@
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:3.0.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testImplementation rootProject.ext.dependencies["junit"]
+
+    //如果aar包有很多，也可以一样象jar包统一添加一个文件夹下的所有包：
+//    def dir = new File('app/libs')
+//    dir.traverse(
+//            nameFilter: ~/.*\.aar/
+//    ) { file ->
+//        def name = file.getName().replace('.aar', '')
+//        implementation(name: name, ext: 'aar')
+//    }
+
+    //------------module依赖----------------------------------
+    implementation rootProject.ext.dependencies["module_support"]
+
+    //==============================组件依赖 kotlin用kapt替换annotationProcessor===============================
+    implementation rootProject.ext.dependencies["androidx_fragment_ktx"]
+    implementation rootProject.ext.dependencies["androidx_activity_ktx"]
+    implementation rootProject.ext.dependencies["palette"]
+    implementation rootProject.ext.dependencies["androidx_constraint_layout"]
+    implementation rootProject.ext.dependencies["androidx_recyclerview"]
+    implementation rootProject.ext.dependencies["andriodx_viewpager2"]
+    implementation rootProject.ext.dependencies["androidx_material_design"]
+    implementation rootProject.ext.dependencies["androidx_cardview"]
+    implementation rootProject.ext.dependencies["androidx_gridLayout"]
+    implementation rootProject.ext.dependencies["androidx_multidex"]
+    implementation rootProject.ext.dependencies["coroutine_core"]
+    implementation rootProject.ext.dependencies["coroutine_android"]
+    //jetPack navigation
+    implementation rootProject.ext.dependencies["navigation_fragment"]
+    implementation rootProject.ext.dependencies["navigation_ui"]
+
+    //JetPack Room
+    implementation rootProject.ext.dependencies["room_runtime"]
+    implementation rootProject.ext.dependencies["room_ktx"]
+    kapt rootProject.ext.dependencies["room_compiler"]
+    androidTestImplementation rootProject.ext.dependencies["room_test"]
+
+    implementation rootProject.ext.dependencies["eventbus"]
+
+    implementation rootProject.ext.dependencies["immersionbar"]
+
+    implementation rootProject.ext.dependencies["smooth_bottom_nav"]
+
+    implementation rootProject.ext.dependencies["youth_banner"]
+
+    implementation rootProject.ext.dependencies["pictureSelector"]
+    implementation rootProject.ext.dependencies["photoview_smooth"]
+
+    implementation rootProject.ext.dependencies["superTextView"]
+
+    implementation rootProject.ext.dependencies["bugly_upgrade"]
+    implementation rootProject.ext.dependencies["bugly_native"]
+    implementation rootProject.ext.dependencies["mmkv"]
+
+    implementation rootProject.ext.dependencies["lottie"]
+
+    implementation rootProject.ext.dependencies["brvah"]
+    implementation rootProject.ext.dependencies["verticalTab"]
+    implementation rootProject.ext.dependencies["flowlayout"]
+
+    //是否启用头条屏幕适配
+//    implementation rootProject.ext.dependencies["headline_autosize"]
+
+//    implementation rootProject.ext.dependencies["ali_OSS"]
+
+    implementation rootProject.ext.dependencies["license_dialog"]
+    implementation rootProject.ext.dependencies["logger"]
+
+    implementation rootProject.ext.dependencies["rxbinding2"]
+    implementation rootProject.ext.dependencies["rxjava2"]
+    implementation rootProject.ext.dependencies["rxandroid2"]
+
+    implementation(name: 'BaiduLBS_AndroidSDK_Lib', ext: 'aar')
+
+    //glide
+    implementation rootProject.ext.dependencies["glide"]
+    kapt rootProject.ext.dependencies["glide_compiler"]
+    implementation rootProject.ext.dependencies["glide_transformations"]
+    implementation rootProject.ext.dependencies["glide_okhttp_integration"]
+
+    //okhttp,retrofit
+    implementation rootProject.ext.dependencies["okhttp"]
+    implementation rootProject.ext.dependencies["okio"]
+    implementation rootProject.ext.dependencies["okhttp_interceptor"]
+    implementation rootProject.ext.dependencies["retrofit"]
+    implementation rootProject.ext.dependencies["retrofit_converter_scalars"]
+    implementation rootProject.ext.dependencies["retrofit_converter_gson"]
+    implementation rootProject.ext.dependencies["retrofit_rxjava2_adapter"]
+    implementation rootProject.ext.dependencies["cookieJar"]
+
+    //use leakcanary
+//    debugImplementation rootProject.ext.dependencies["leakcanary"]
+//    debugImplementation rootProject.ext.dependencies["blockcanary"]
+
+    //sqlite调试工具
+    debugImplementation rootProject.ext.dependencies["db_debug"]
+}

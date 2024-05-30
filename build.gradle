@@ -1,0 +1,59 @@
+apply from:'config.gradle'
+
+buildscript {
+    ext.kotlin_version = '1.7.10'
+    repositories {
+        google()
+        mavenCentral() // add repository
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.2.2'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+allprojects {
+    repositories {
+        maven { url 'https://maven.aliyun.com/repository/public/' }
+        maven { url 'https://maven.aliyun.com/repository/google/' }
+        google()
+        mavenCentral() // add repository
+        maven { url "https://jitpack.io" }
+        jcenter()
+
+        flatDir {
+            //指定某个module支持aar
+            dirs project(':module_support').file('libs')
+            //2种方式均可
+//            dirs '../module_support/libs'
+        }
+    }
+}
+
+//统一所有module的support依赖版本
+subprojects {
+    project.configurations.all {
+        resolutionStrategy.eachDependency { details ->
+            if (details.requested.group == 'androidx.activity' && details.requested.name.contains('androidx')) {
+                details.useVersion '1.4.0'
+            }
+            if (details.requested.group == 'androidx.core' && details.requested.name.contains('androidx')) {
+                details.useVersion '1.6.0'
+            }
+            if (details.requested.group == 'androidx.annotation' && details.requested.name.contains('annotation')) {
+                details.useVersion "1.2.0"
+            }
+            if (details.requested.group == 'androidx.recyclerview' && details.requested.name.contains('recyclerview')) {
+                details.useVersion "1.2.1"
+            }
+            if (details.requested.group == 'androidx.constraintlayout') {
+                details.useVersion "2.0.1"
+            }
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

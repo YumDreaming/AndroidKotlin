@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#0094ff</color>
+    <color name="colorPrimaryDark">#0094ff</color>
+    <color name="colorAccent">#ff5656</color>
+
+
+    <!-- 默认背景色 -->
+    <color name="backgroundColor">#f2f6f7</color>
+    <color name="common_white">#FFFFFF</color>
+    <color name="color_title_bg">#CCFFFFFF</color>
+    <color name="black_white">#000000</color>
+    <color name="color_44aaaaaa">#44aaaaaa</color>
+    <color name="color_8e9dac">#558e9dac</color>
+    <color name="color_play_bg">#FFFFFF</color>
+    <color name="color_seek_end">#D5D4D4</color>
+    <color name="white_black">#FFFFFF</color>
+    <color name="c_999999">#999999</color>
+
+    <!--空气质量叶子颜色-->
+    <color name="color_air_leaf_1">#73DC29</color>
+    <color name="color_air_leaf_2">#EADD14</color>
+    <color name="color_air_leaf_3">#EA8A01</color>
+    <color name="color_air_leaf_4">#FF460D</color>
+    <color name="color_air_leaf_5">#B12C9A</color>
+    <color name="color_air_leaf_6">#582C21</color>
+</resources>

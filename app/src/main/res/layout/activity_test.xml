@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/bt_test_status_bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="测试状态栏" />
+
+                <Button
+                    android:id="@+id/bt_oom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="测试oom" />
+
+                <Button
+                    android:id="@+id/bt_aidl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="测试aidl"
+                    android:typeface="sans" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/bt_main"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Jetpack Navigation"
+                    android:typeface="monospace" />
+
+                <Button
+                    android:id="@+id/bt_test_data_binding"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="test DataBinding"
+                    android:textAllCaps="false"
+                    android:typeface="serif" />
+
+                <Button
+                    android:id="@+id/bt_countdown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="倒计时" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ProgressBar
+                    android:id="@+id/pb"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:progress="45"
+                    android:progressDrawable="@drawable/layerlist_pb_style" />
+
+                <SeekBar
+                    android:id="@+id/seekBar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/et_url"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="输入测试url"
+                android:text="http://" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/bt_test_web"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="test x5Web"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/bt_room"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="test Room"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/btn_phone"
+                    style="@style/RippleStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PHONE SMS"
+                    android:textColor="@color/colorPrimary" />
+
+                <Button
+                    android:id="@+id/btn_wifi"
+                    style="@style/RippleStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:text="wifi info"
+                    android:textColor="@color/colorPrimary" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_motion_demo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MotionLayoutDemo"
+                android:textColor="@color/colorPrimary" />
+
+
+            <TextSwitcher
+                android:id="@+id/ts"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:inAnimation="@anim/bottom_in"
+                android:outAnimation="@anim/top_out" />
+
+
+            <Button
+                android:id="@+id/btn_baidu_map"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="百度地图选坐标"
+                android:textColor="@color/colorPrimary" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_coolapk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="酷安详情联动"
+                    android:textColor="@color/colorPrimary" />
+
+                <Button
+                    android:id="@+id/btn_my_nested"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="自定义酷安联动"
+                    android:textColor="@color/colorPrimary" />
+            </LinearLayout>
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@color/color_d5d5d5">
+
+                <com.jacky.wanandroidkotlin.test.SquareView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_fb5656" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@drawable/bitmap_drawable" />
+
+            <View
+                android:id="@+id/v_level_list"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp" />
+
+            <View
+                android:id="@+id/v_transition"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!--    变高指示器-->
+    <FrameLayout
+        android:id="@+id/fl_indicator_bg"
+        android:layout_width="8dp"
+        android:layout_height="50dp"
+        android:layout_gravity="end|center_vertical"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/shape_primary_10">
+
+        <View
+            android:id="@+id/v_indicator"
+            android:layout_width="8dp"
+            android:layout_height="30dp"
+            android:background="@drawable/shape_accend_10" />
+    </FrameLayout>
+
+    <!--    固定高度指示器-->
+    <FrameLayout
+        android:id="@+id/fl_indicator_bg2"
+        android:layout_width="8dp"
+        android:layout_height="80dp"
+        android:layout_gravity="end|center_vertical"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/shape_primary_10">
+
+        <View
+            android:id="@+id/v_indicator2"
+            android:layout_width="8dp"
+            android:layout_height="30dp"
+            android:background="@drawable/shape_accend_10" />
+    </FrameLayout>
+
+</FrameLayout>
